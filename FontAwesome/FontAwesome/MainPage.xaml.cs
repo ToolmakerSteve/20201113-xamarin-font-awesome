@@ -14,5 +14,13 @@ namespace FontAwesome
         {
             InitializeComponent();
         }
-    }
+
+		private void Button_Clicked(object sender, EventArgs e)
+		{
+			Device.BeginInvokeOnMainThread(async () =>
+			{
+				await DisplayAlert("Testing", "Yes, the UI is still alive.", "OK");
+			});
+		}
+	}
 }
